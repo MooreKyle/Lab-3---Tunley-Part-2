@@ -272,13 +272,27 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="g1H-uf-VE6">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="g1H-uf-VE6" customClass="AlbumCell" customModule="lab_tunley" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="lz4-8H-crg">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AVN-R2-Blo">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="AVN-R2-Blo" secondAttribute="bottom" id="71o-sK-YRD"/>
+                                                <constraint firstItem="AVN-R2-Blo" firstAttribute="top" secondItem="lz4-8H-crg" secondAttribute="top" id="DjS-pk-Ggt"/>
+                                                <constraint firstItem="AVN-R2-Blo" firstAttribute="leading" secondItem="lz4-8H-crg" secondAttribute="leading" id="Lv0-In-hV9"/>
+                                                <constraint firstAttribute="trailing" secondItem="AVN-R2-Blo" secondAttribute="trailing" id="vfj-kb-39X"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="albumImageView" destination="AVN-R2-Blo" id="RPu-Rr-kAc"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
